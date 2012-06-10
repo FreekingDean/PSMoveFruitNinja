@@ -1,0 +1,17 @@
+C:\Users\ehstudent\Desktop\MainScreen\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Irrelvant.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Irrelvant.pdb
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Boo.Lang.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\PSMoveSharp.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\UnityEditor.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\UnityEngine.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\UnityScript.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\nunit.framework.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Boo.Lang.Compiler.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\UnityScript.Lang.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Boo.Lang.PatternMatching.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Boo.Lang.Parser.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Boo.Lang.Useful.dll
+C:\Users\ehstudent\Desktop\MainScreen\Temp\bin\Debug\Mono.Security.dll
+C:\Users\ehstudent\Desktop\MainScreen\obj\Debug\Irrelvant.dll
+C:\Users\ehstudent\Desktop\MainScreen\obj\Debug\Irrelvant.pdb

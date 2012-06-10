@@ -1,0 +1,16 @@
+E:\unity\snowmanunity\final\Temp\bin\Debug\Irrelvant.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\Irrelvant.pdb
+E:\unity\snowmanunity\final\Temp\bin\Debug\Boo.Lang.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\UnityEditor.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\UnityEngine.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\UnityScript.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\nunit.framework.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\Boo.Lang.Compiler.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\UnityScript.Lang.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\Boo.Lang.PatternMatching.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\Boo.Lang.Parser.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\Boo.Lang.Useful.dll
+E:\unity\snowmanunity\final\Temp\bin\Debug\Mono.Security.dll
+E:\unity\snowmanunity\final\obj\Debug\ResolveAssemblyReference.cache
+E:\unity\snowmanunity\final\obj\Debug\Irrelvant.dll
+E:\unity\snowmanunity\final\obj\Debug\Irrelvant.pdb
