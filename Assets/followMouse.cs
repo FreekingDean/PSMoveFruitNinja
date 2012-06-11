@@ -1,26 +1,25 @@
 using UnityEngine;
 using System.Collections;
 using System;
-/* okay so i reattached everything and hopefuly it will stay, i re worked the physics so non on the sides go directly up,
- * i deleted afew unneeded things so please dont merge the whole folder or loading will be painful,
- * i added a second cursor with a seprate script it only works for the mouse and can only slice when the left button is down,
- * so the original cursor and the gui one only work with the move now as i dont know the code please edit this script
- * so that the cursor is hidden unless being used (idk if enable=false in the begining will let it turn its self on, if not just move it out of sight while out of use)
- * i also need you to set it to only slice when a button is down, the code for mouse down is comented out below,
- * i edited the volume so it is more even between the songs, and i need you to do a gui score and something for the snowman, points are in newbehaviorscript,
- * i changed the launcher so it is random what and howmany show up,also i fell like the music could be reworked or a longer version as the jump in the loop is noticable,
- and if you have time pressing 'p' to go to a pause screen or a countdown before the round would be cool, also sounds for slicing too. other then the move related stuff
- i plan to work in these things to this is just a general list of what could still be done*/
+
+/**
+ * This is the default class that depicts how to Move the coursor to follow the mouse.
+ * 
+ * The playerNumber is set in the Unity Editor itself
+ */
+
 public class followMouse : MonoBehaviour {
     private PSMoveSharpState state;
-
-    private int length, height;
-
+	
+	public int playerNumber; //Coursor Number
+	
+	private bool isNotPlaying;
+	
 	// Use this for initialization
 	void Start () {
-        length = Screen.width;
-        height = Screen.height;
+        isNotPlaying = true;
 	}
+	
     void Update()
     {
         float height = transform.position.y;
@@ -31,7 +30,7 @@ public class followMouse : MonoBehaviour {
 		bool  isTrigger = false;
 		
 		
-      if (MainMenuGui.isCalibrated)
+      if ((playerNumber == 1 || playerNumber == 2) && MoveMeConnect.client_connected)
       {
             state = MoveMeConnect.getState();
 			
@@ -53,23 +52,45 @@ public class followMouse : MonoBehaviour {
                 posY = (sHeight / 2) - (-sHeight * posY);
             if (posY == 0)
                 posY = sHeight / 2;
-		UInt16 just_pressed = (UInt16)(state.gemStates[0].pad.digitalbuttons);
+			UInt16 just_pressed = (UInt16)(state.gemStates[0].pad.digitalbuttons);
 
-        const int PadTick = 1 << 2;
+        	const int PadTick = 1 << 2;
 			
-        if ((just_pressed & PadTick) == PadTick)
+        	if ((just_pressed & PadTick) == PadTick)
 				transform.collider.isTrigger = false;  
-		else 
+			else 
 				transform.collider.isTrigger = true;
                
         }
+        else
+        {
+        	posX = Input.mousePosition.x;
+        	posY = Input.mousePosition.y;
+        	
+        	if (Input.GetMouseButtonDown(0))
+            	transform.collider.isTrigger = false;
+        	if (Input.GetMouseButtonUp(0))
+            	transform.collider.isTrigger=true;
+        }
 		
-		if(ScoreKeeper.getPlayers() == 0)
+		if(ScoreKeeper.getPlayers() == 2)
+			if(playerNumber == 0 || playerNumber == 1)
+				isNotPlaying = false;
+		
+		if(ScoreKeeper.getPlayers() == 3)
+			if(playerNumber == 1 || playerNumber == 2)
+				isNotPlaying = false;
+		
+		if(ScoreKeeper.getPlayers() == playerNumber || ScoreKeeper.getPlayers() == 4)
+			isNotPlaying = false;
+		
+		if(isNotPlaying)
 		{
 			transform.collider.isTrigger = false;
 			transform.position =  new Vector3(0, 0, 100);
 		}
-		else{
+		else
+		{
 	        if ((Convert.ToSingle(-15 + (posX / (Screen.width / 100)) * .3) < -18))
 	        {
 	            width = -18;
