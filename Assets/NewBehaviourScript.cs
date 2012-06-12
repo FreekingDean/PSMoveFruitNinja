@@ -13,7 +13,7 @@ public class NewBehaviourScript : MonoBehaviour
     // Use this for initialization
     void OnCollisionEnter(Collision cursor)
     {
-        if ((cursor.gameObject.name == "cursor2") || (cursor.gameObject.name == "cursor") || (cursor.gameObject.name == "cursor3"))
+        if ((cursor.gameObject.name == "mouseCursor") || (cursor.gameObject.name == "moveMeCursor1") || (cursor.gameObject.name == "moveMeCursor2"))
             {
                 chits++;
                 if (chits == hits)
